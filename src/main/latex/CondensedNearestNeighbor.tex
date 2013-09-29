@@ -1,10 +1,9 @@
-\documentclass[preprint]{elsarticle}
+\documentclass{article}
 \usepackage{amsthm,amsmath,bbm,amsfonts,mathrsfs,eucal,algorithmic,algorithm,url,graphicx,subfigure,color}
 
 % \usepackage[top=2.54cm, bottom=2.54cm, left=2.54cm, right=2.54cm]{geometry} 
 
 
-\usepackage{natbib}
 \usepackage{textcomp}
 \usepackage{multirow} 
 
@@ -27,21 +26,20 @@
 \newcommand{\rp}{ \right)}
 \newcommand{\ls}{ \left[}
 \newcommand{\rs}{ \right]}
-\newcommand{\AND}{ \text{ AND }}
-\newcommand{\OR}{ \text{ OR }}
+%\newcommand{\myAND}{ \text{ AND }}
+%\newcommand{\myOR}{ \text{ OR }}
 \newcommand{\tth}{ \text{th}}
-
-\journal{Artificial Intelligence}
 
 \newtheorem{lemma}{Lemma}
 \newtheorem{theorem}{Theorem}
 
-\begin{document}
-\begin{frontmatter}
-\journal{Artificial Intelligence}
 \title{An upper bound on prototype set size for condensed nearest neighbor}
 \author{Eric Christiansen}
-\ead{echristiansen@cs.ucsd.edu}
+
+\begin{document}
+
+\maketitle
+
 % \author{Anonymous}
 % \ead{anonymous@anonymous.edu}
 
@@ -49,17 +47,6 @@
 The condensed nearest neighbor (CNN) algorithm is a heuristic for reducing the number of prototypical points stored by a nearest neighbor classifier, while keeping the classification rule given by the reduced prototypical set consistent with the full set.
 I present an upper bound on the number of prototypical points accumulated by CNN. The bound originates in a bound on the number of times the decision rule is updated during training in the multiclass perceptron algorithm, and thus is independent of training set size.
 \end{abstract}
-
-\begin{keyword}
-prototype selection \sep
-nearest neighbor \sep
-multiclass perceptron \sep
-theory \sep
-bound
-\end{keyword}
-
-
-\end{frontmatter}
 
 \section{Introduction}
 The nearest neighbor (NN) rule assigns to an unclassified point the class of a closest point from a set of prototypical points. The NN algorithm stores every training point as a prototypical point and classifies new points according to the NN rule. 
@@ -298,7 +285,7 @@ I would like to thank Mehran Bozorgi, Charles Elkan, and Matus Telgarsky for act
 
 This work was funded by NSF grant \#SBE-0542013 to the Temporal Dynamics of Learning Center, an NSF Science of Learning Center.
 
-\bibliographystyle{elsarticle-harv}
-\bibliography{cnn.bib}
+\bibliographystyle{plain}
+\bibliography{library.bib}
 \end{document}
 
